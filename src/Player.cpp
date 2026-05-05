@@ -2,6 +2,8 @@
 
 Player::Player()
 {
+    health = 100.f;
+    invincibilityTimer = 0.f;
     shape.setRadius(40.f);
     shape.setFillColor(sf::Color::White);
     shape.setOrigin(40.f, 40.f);
@@ -11,6 +13,8 @@ Player::Player()
 
 void Player::update(float dt)
 {
+
+    invincibilityTimer -= dt;
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
         position.x -= speed * dt;
@@ -25,4 +29,15 @@ void Player::update(float dt)
 void Player::draw(sf::RenderWindow& window)
 {
     window.draw(shape);
+}
+
+void Player::takeDamage() {
+    if (invincibilityTimer <= 0.f) {
+        health *= 0.5f;
+        invincibilityTimer = 1.0f;
+    }
+}
+
+float Player::getHealth() {
+    return health;
 }

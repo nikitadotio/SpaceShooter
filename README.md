@@ -49,8 +49,11 @@ Entity          ← base class (position, velocity, update, draw)
 - Game over if asteroid reaches player
 
 ## Out of Scope (Basic Version)
-- Score system
-- Lives/health
 - Sprite artwork (using shapes for now)
 - Sound
 - XP or progression
+
+## TODO
+- [ ] Point counter — earn 5 points for every 5 asteroids that fall off screen
+- [ ] Game over screen — display when health reaches 0, show final score
+- [ ] Score display — render live score on screen using sf::Text + font file
