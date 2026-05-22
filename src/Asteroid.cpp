@@ -14,7 +14,7 @@ bool Asteroid::textureLoaded = false;
 Asteroid::Asteroid()
 {
     if (!textureLoaded) {
-        texture.loadFromFile("../assets/textures/asteroid.png");
+        texture.loadFromFile("assets/textures/asteroid.png");
         textureLoaded = true;
     }
     sprite.setTexture(texture);

@@ -6,7 +6,7 @@ bool Player::textureLoaded = false;
 Player::Player()
 {
     if (!textureLoaded) {
-        texture.loadFromFile("../assets/textures/ship.png");
+        texture.loadFromFile("assets/textures/ship.png");
         textureLoaded = true;
     }
     sprite.setTexture(texture);

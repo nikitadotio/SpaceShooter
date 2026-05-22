@@ -46,7 +46,7 @@ int main()
     }
 
     sf::Font font;
-    font.loadFromFile("../assets/fonts/DejaVuSans.ttf");
+    font.loadFromFile("assets/fonts/DejaVuSans.ttf");
 
     // HUD
     sf::Text scoreText, livesText;
