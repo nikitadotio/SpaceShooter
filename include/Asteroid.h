@@ -4,11 +4,14 @@
 class Asteroid : public Entity {
 public:
     Asteroid();
-    void update(float dt)override;
-    void draw(sf::RenderWindow& window)override;
-
+    void update(float dt) override;
+    void draw(sf::RenderWindow& window) override;
+    bool escaped = false;
 
 private:
-    sf::CircleShape shape;
+    static sf::Texture texture;
+    static bool textureLoaded;
+    sf::Sprite sprite;
     float angle;
+    float rotSpeed;
 };
